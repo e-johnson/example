@@ -1,10 +1,12 @@
 from datetime import datetime
 from flask import Flask
 app = Flask(__name__)
+def strip_url(orig):
+   return orig.replace('index.fcgi/', '')
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return strip_url('Hello World!')
 
 @app.route('/the-time')
 def the_time():
