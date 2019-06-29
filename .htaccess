@@ -1,5 +1,5 @@
 Options +ExecCGI
 AddHandler fcgid-script .fcgi
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !=/YOUR/PATH/TO/public_html/flask_hello_world/flask_hello_world.fcgi
+RewriteCond %{REQUEST_FILENAME} !=/home/ewalliec/public_html/example/example.fcgi
 RewriteRule ^(.*)$ flask_hello_world.fcgi/$1 [QSA,L]
